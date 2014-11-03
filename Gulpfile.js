@@ -71,7 +71,7 @@ gulp.task('push_to_dev', function () {
     remoteUrl:  "git@github.com:coding-the-humanities/unacademic_development.git",
     message:    "Semi-automatically push with Gulp."
   };
-  return gulp.src('*')
+  return gulp.src('./*')
     .pipe(deploy(options));
 })
 
