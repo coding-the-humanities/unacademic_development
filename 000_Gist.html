@@ -48,8 +48,13 @@
       <div class="container">
         <div class="hero-unit">
           <div class="col-xs-9">
-            <h3>{{ title }}</h3>
-            <p>{{{markdown description.full}}}</p>
+            <h3>Gist</h3>
+            <p><p>You would think one way to share code with your peers and/or friends would be by e-mail.
+But mailing one&#39;s code is a hassle when you have to deal with lots of different files and endless lines of code.
+Another way is to place these on Github, a website made for and by programmers to store and share code.</p>
+<p>Github offers two ways to do that. The first is making a repository. More on this will follow later.
+The second way is Gist, particulary handy for code snippets and a lot easier -though with some limitations.</p>
+</p>
           </div>
         </div>
       </div>
@@ -57,33 +62,58 @@
 
 
     <div class="container">
-      {{#each tasks}}
         <section class="task">
 
-          <h3>{{title}}</h3>
-          {{#if description}}
-          <p>{{{markdown description}}}</p>
-          {{/if}}
+          <h3>Create your first Gist</h3>
 
           <h5>Instructions</h5>
           <ul>
-            {{#each instructions}}
-            <li><p>{{{markdown this}}}</p></li>
-            {{/each}}
+            <li><p><p>Go to <a href="http://gist.github.com">http://gist.github.com</a>.</p>
+</p></li>
+            <li><p><p>Write some simple HTML or CSS into the box on your screen.</p>
+</p></li>
           </ul>
 
-          {{#if resources}}
-          <h5>Resources</h5>
-          <ul>
-            {{#each resources}}
-            <li>
-              <p>{{#if site}}{{site.name}}: {{/if}}<a href="{{url}}">{{title}}</a></p>
-            </li>
-            {{/each}}
-          </ul>
-          {{/if}}
         </section>
-      {{/each}}
+        <section class="task">
+
+          <h3>Experiment with Syntax Highlighting</h3>
+
+          <h5>Instructions</h5>
+          <ul>
+            <li><p><p>Give the file the name 000_Gist_Assignment.html or 000_Gist_Assignment.css.</p>
+</p></li>
+            <li><p><p>Notices that the your html/css now has certain words in color.</p>
+</p></li>
+          </ul>
+
+        </section>
+        <section class="task">
+
+          <h3>Gist it with Github</h3>
+
+          <h5>Instructions</h5>
+          <ul>
+            <li><p><p>Log in with Github</p>
+</p></li>
+            <li><p><p>Put the HTML or CSS you wrote into the box on the screen</p>
+</p></li>
+          </ul>
+
+        </section>
+        <section class="task">
+
+          <h3>Share your Gist</h3>
+
+          <h5>Instructions</h5>
+          <ul>
+            <li><p><p>Click &quot;Create public Gist&quot; in the bottom right corner.</p>
+</p></li>
+            <li><p><p>Put the link to your gist in our <a href="fishbowl.slack.com">Slack</a> Channel.</p>
+</p></li>
+          </ul>
+
+        </section>
     </div>
 
 
