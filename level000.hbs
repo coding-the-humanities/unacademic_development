@@ -48,13 +48,8 @@
       <div class="container">
         <div class="hero-unit">
           <div class="col-xs-9">
-            <h3>CSS</h3>
-            <p><p>This is the introduction to CSS (cascading style sheets). A CSS file allows 
-you to separate your website&#39;s markup content from its style. As always you 
-use your HTML file to arrange the content, but all of the presentation 
-(fonts, colors, background, borders, text formatting, link effects &amp; so on…) 
-are accomplished within a CSS file.</p>
-</p>
+            <h3>{{ title }}</h3>
+            <p>{{{markdown description.full}}}</p>
           </div>
         </div>
       </div>
@@ -62,106 +57,33 @@ are accomplished within a CSS file.</p>
 
 
     <div class="container">
+      {{#each tasks}}
         <section class="task">
 
-          <h3>Introduction</h3>
-          <p><p>Learn about styling web pages with cascading style sheets.</p>
-</p>
+          <h3>{{title}}</h3>
+          {{#if description}}
+          <p>{{{markdown description}}}</p>
+          {{/if}}
 
           <h5>Instructions</h5>
           <ul>
-            <li><p><p>Read the article.</p>
-</p></li>
-            <li><p><p>Watch the instruction video.</p>
-</p></li>
+            {{#each instructions}}
+            <li><p>{{{markdown this}}}</p></li>
+            {{/each}}
           </ul>
 
+          {{#if resources}}
           <h5>Resources</h5>
           <ul>
+            {{#each resources}}
             <li>
-              <p>CSS Tutorial: <a href="http://youtu.be/Waq1d1jpl3M">CSS Tutorial</a></p>
+              <p>{{#if site}}{{site.name}}: {{/if}}<a href="{{url}}">{{title}}</a></p>
             </li>
+            {{/each}}
           </ul>
+          {{/if}}
         </section>
-        <section class="task">
-
-          <h3>Selectors</h3>
-          <p><p>In order for CSS to work you first need to specify which element you wish  to apply CSS to. You do this with &#39;selectors&#39;. Selectors are essentially  just names for the things you want to target and affect. Within the  {brackets} of selectors you place the effects you want to apply. In this  assignment we want you to create selectors.</p>
-</p>
-
-          <h5>Instructions</h5>
-          <ul>
-            <li><p><p>Read the article.</p>
-</p></li>
-            <li><p><p>Watch the video.</p>
-</p></li>
-            <li><p><p>Add selectors to the html provided in the resources for the body, the paragraphs and each separate title.</p>
-</p></li>
-          </ul>
-
-          <h5>Resources</h5>
-          <ul>
-            <li>
-              <p>Mozilla Developer Network: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/ Getting_started/Selectors">CSS selectors</a></p>
-            </li>
-            <li>
-              <p>Simple CSS Flat Design Container: <a href="http://youtu.be/irZ1ZMImZfg">CSS Container</a></p>
-            </li>
-          </ul>
-        </section>
-        <section class="task">
-
-          <h3>Colors</h3>
-          <p><p>Colors give life to a page. Black and white may be minimalistic and sleek,  but the possibilities that arise when you add, say, 50 shades of grey, add  so much to a website. This article focuses mainly on background color, but  the principles can also be applied to text color. Color a text and  background for this assignment.</p>
-</p>
-
-          <h5>Instructions</h5>
-          <ul>
-            <li><p><p>Read the articles</p>
-</p></li>
-            <li><p><p>Write a short text about how to use selectors in CSS.</p>
-</p></li>
-            <li><p><p>Color your webpage and the text you just wrote.</p>
-</p></li>
-          </ul>
-
-          <h5>Resources</h5>
-          <ul>
-            <li>
-              <p>Mozilla Developer Network: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ background-color">Background Color</a></p>
-            </li>
-            <li>
-              <p>W3C Schools: <a href="http://www.w3schools.com/html/html_colorvalues.asp">Hexidecimal Color Code</a></p>
-            </li>
-            <li>
-              <p>Hex Color Picker: <a href="http://www.colorpicker.com/">Hex Color Picker</a></p>
-            </li>
-          </ul>
-        </section>
-        <section class="task">
-
-          <h3>CSS Fonts</h3>
-          <p><p>CSS also allows programmers to change the font on your webpage, or even  include all the fonts. You can include custom fonts, but for some of them  you have to pay. Nevertheless, you will probably grow font of the  possibilities you already possess. Add cool fonts to your webpage.</p>
-</p>
-
-          <h5>Instructions</h5>
-          <ul>
-            <li><p><p>Read the article.</p>
-</p></li>
-            <li><p><p>Change the font of your short text.</p>
-</p></li>
-          </ul>
-
-          <h5>Resources</h5>
-          <ul>
-            <li>
-              <p>W3C Schools: <a href="http://www.w3schools.com/css/css_font.asp">CSS Fonts</a></p>
-            </li>
-            <li>
-              <p>Mozilla Developer Network: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">More CSS Fonts</a></p>
-            </li>
-          </ul>
-        </section>
+      {{/each}}
     </div>
 
 
