@@ -71,7 +71,7 @@ gulp.task('push_to_dev', function () {
     remoteUrl:  "git@github.com:coding-the-humanities/unacademic_development.git",
     message:    "Pushed to unacademic_development. XOXO, Gulp."
   };
-  return gulp.src('../unacademic_static/*')
+  return gulp.src('*')
     .pipe(deploy(options));
 })
 
